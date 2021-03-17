@@ -4,6 +4,7 @@
   slack webhook url => https://hooks.slack.com/services/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
   To define those in github, you can navigate to 'Repository Settings' > 'Secrets' > 'New Repository secret'.
 - Deployed @ https://pokedex-app-ex99.herokuapp.com/
+- You can enable/disable workflows from github, read more at https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow .
 - App name @ pokedex-app-ex99
 
 This repository is used for the CI/CD module of the Full stack open course
