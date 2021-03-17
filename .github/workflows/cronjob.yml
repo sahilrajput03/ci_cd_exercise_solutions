@@ -1,7 +1,7 @@
 # Deployed @ https://pokedex-app-ex99.herokuapp.com/
 # App name @ pokedex-app-ex99
 # Make better cron job patterns using: https://crontab.guru/every-12-hours
-name: Periodic health check
+name: Cronjob - Periodic health check
 
 on:
   # push:
