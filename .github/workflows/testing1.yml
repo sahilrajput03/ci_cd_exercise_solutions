@@ -1,6 +1,6 @@
 # testing
 # for reference, visit: https://github.com/mtuomiko/full-stack-open-pokedex/blob/master/.github/workflows/pipeline.yml
-name: Test Workflow 1
+name: Test 1 Workflow
 
 on:
   push:

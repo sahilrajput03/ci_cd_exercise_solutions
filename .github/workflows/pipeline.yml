@@ -1,7 +1,7 @@
 # - Deployed @- https://pokedex-app-ex99.herokuapp.com/
 # - App name @- pokedex-app-ex99
 
-name: Deployment pipeline
+name: Deployment pipeline Workflow
 
 on:
   push:
