@@ -1,6 +1,6 @@
 # Full Stack open CI/CD.
 
-- For this app to work you need two environment variables i.e., HEROKU_API_KEY and SLACK_WEBHOOK_URL..
+- For this app to work you need two environment variables i.e., HEROKU_API_KEY and SLACK_WEBHOOK_URL...
   slack webhook url => https://hooks.slack.com/services/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
   To define those in github, you can navigate to 'Repository Settings' > 'Secrets' > 'New Repository secret'.
 - Deployed @ https://pokedex-app-ex99.herokuapp.com/
