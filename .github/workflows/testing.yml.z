@@ -1,0 +1,26 @@
+# testtttt
+# for reference, visit: https://github.com/mtuomiko/full-stack-open-pokedex/blob/master/.github/workflows/pipeline.yml
+name: Testing stufff
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  a_test_job:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: my_commit_messages
+        if: ${{!contains(join(github.event.commits.*.message) , '#skip')}}
+        # Notice the `not` operator in above if expression.
+        env:
+          COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
+          # COMMIT_SHA: ${{github.sha}}
+          # WORKFLOW_INITIATOR: ${{github.actor}}
+        run: |
+          echo "$COMMIT_MESSAGES"
+          echo "Word #skip was there in commit message so we are not deploying this commit to production and it is not tagged with a version number "
+# NOTE: We have used `-` infront of name in above steps and that is absolutely cool even if you remove it
+# from name and place infront of `if` but then you would need to put name below `if` statement, yikes!
