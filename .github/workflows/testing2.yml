@@ -1,6 +1,6 @@
-# test_22
+# testing
 # This workflow works good for sending message to the slack group, differently for each success and failure case.
-name: Testing stuff.
+name: Test Workflow 2
 
 on:
   push:
