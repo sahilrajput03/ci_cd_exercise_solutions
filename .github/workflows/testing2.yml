@@ -18,7 +18,7 @@ jobs:
           # To mimic a failure case, just use some badCommand here, yikes!
 
       - name: Slack - Build success notification action.
-        uses: 8398a7/action-slack@v3
+        uses: 8398a7/action-slack@v3.9.0
         if: ${{success()}}
         # if: ${{always()}} # DEBUGGING...
         # NOTE: ${{}} is very important for success() and failure() command to behave properly, #tested!
@@ -39,7 +39,7 @@ jobs:
       - name: Slack - Build failure notification action.
         if: ${{failure()}}
         # if: ${{always()}} # DEBUGGING...
-        uses: 8398a7/action-slack@v3
+        uses: 8398a7/action-slack@v3.9.0
         with:
           status: ${{job.status}}
           fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
