@@ -40,7 +40,7 @@ jobs:
           wait-on: http://localhost:5000
 
       - if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message) , '#skip') }}
-        name: Advance deployment to Heroku platform (Rollback to previous deployed version if current deploy fails healthcheck test)
+        name: Advance Heroku deployment (Rollback to previous deployed version if current deploy fails healthcheck test)
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
