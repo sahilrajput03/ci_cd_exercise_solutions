@@ -1,5 +1,5 @@
 # testing
-# This workflow works good for sending message to the slack group, differently for each success and failure case..
+# This workflow works good for sending message to the telegram user, group, or channels.
 name: Test 3 Workflow
 
 on:
@@ -18,7 +18,7 @@ jobs:
           to: '711263195' #This is for @sahilrajupt03, To get anybody's chat id(its basically user id though) forward his/her/group's message to @userinfobot.
           token: ${{ secrets.TELEGRAM_TOKEN }}
           # args: The ${{ github.event_name }} event triggered this.
-          # If you miss args like commenting above line, then default message will be sent, e.g., `sahilrajput03/ci_cd_exercise_solutions/Test 3 Workflow triggered by sahilrajput03 (push)`.
+          # If you omit args by commenting above line, then default message will be sent, e.g., `sahilrajput03/ci_cd_exercise_solutions/Test 3 Workflow triggered by sahilrajput03 (push)`.
 
       - name: send message to group work-d-pc
         uses: appleboy/telegram-action@master
@@ -34,6 +34,13 @@ jobs:
           to: '-593237233'
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: The ${{ github.event_name }} event triggered this. And it works cool.
+          # Steps to replicate this technology:
+          # 1. Message `/start` from your personal telegram account to `@BotFather` in telegram and create a bot. After that you'll get the token to manage your bot you just created.
+          # 2. Now make a group on telegram and add your bot as either subscriber(recommended) or administrator to the group via your personal telegram account. NOTE: If you want to make a channel instead, you must add your bot as administrator to the channel otherwise it won't work.
+          # 3. Our bot needs `chat id` to message to any person/group/channel, so make a request in browser e.g., https://api.telegram.org/bot<BOT_TOKEN>/getUpdates, and look for `title: "YOUR_GROUP_NAME_HERE"` in json, and along with `title` that you'll find the `id` for the group. (NOTE: Same applies if you bot was added to some channel).
+          # 4. `chat id` is probably something like `-123456789`. Now, use this id as value of `to` in `appleboy/telegram-action@master` actions to send messages to your group.
+          #NOTE: A bot has to added to the group by an administrator of the group only as general users are not allowed to add bot to the group.
+# Failures below!!
 # BELOW FAILS ALL TIME
 # - name: send message to group work-d-pc
 #   uses: appleboy/telegram-action@master
