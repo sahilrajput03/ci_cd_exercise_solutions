@@ -17,7 +17,7 @@ jobs:
         with:
           to: '711263195'
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: The ${{ github.event_name }} event triggered this.
+          # args: The ${{ github.event_name }} event triggered this.
 
       - name: send message to group fullstackopen
         uses: appleboy/telegram-action@master
@@ -31,4 +31,4 @@ jobs:
         with:
           to: '1001158282997'
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: The ${{ github.event_name }} event triggered this.
+          # args: The ${{ github.event_name }} event triggered this.
