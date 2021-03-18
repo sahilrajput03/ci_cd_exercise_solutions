@@ -51,6 +51,6 @@ jobs:
       - name: send message to group work-d-pc
         uses: appleboy/telegram-action@master
         with:
-          to: '\@work_d_pc' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
+          to: '\\@work_d_pc' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: The ${{ github.event_name }} event triggered this3.
