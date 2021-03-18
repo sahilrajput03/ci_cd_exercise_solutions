@@ -27,13 +27,14 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: The ${{ github.event_name }} event triggered this. And it works cool.
 
-      - name: send message to channel TKTL - CICD Channel
+      - name: send message to channel TKTL - CICD Group
+        #Using group makes it difficult to identify which bot made the message, as bot can only be added as admin, and admins have no identifier attached to them.
         uses: appleboy/telegram-action@master
         with:
-          to: '1001327325465'
+          to: '-593237233'
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: The ${{ github.event_name }} event triggered this. And it works cool.
-# Below fails all time
+# BELOW FAILS ALL TIME
 # - name: send message to group work-d-pc
 #   uses: appleboy/telegram-action@master
 #   with:
@@ -41,7 +42,7 @@ jobs:
 #     token: ${{ secrets.TELEGRAM_TOKEN }}
 #     args: The ${{ github.event_name }} event triggered this1.
 
-# Below fails all time
+# BELOW FAILS ALL TIME
 # - name: send message to group work-d-pc
 #   uses: appleboy/telegram-action@master
 #   with:
@@ -49,7 +50,7 @@ jobs:
 #     token: ${{ secrets.TELEGRAM_TOKEN }}
 #     args: The ${{ github.event_name }} event triggered this2.
 
-# Below fails all time
+# BELOW FAILS ALL TIME
 # - name: send message to group work-d-pc
 #   uses: appleboy/telegram-action@master
 #   with:
