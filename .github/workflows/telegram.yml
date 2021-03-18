@@ -15,13 +15,21 @@ jobs:
       - name: send custom message with args
         uses: appleboy/telegram-action@master
         with:
-          to: '711263195'
+          # to: '711263195'
+          to: 'sahilrajput03'
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: The ${{ github.event_name }} event triggered first step.
+          args: The ${{ github.event_name }} event triggered this.
 
       - name: send custom message with args
         uses: appleboy/telegram-action@master
         with:
           to: '@fullstackcourse'
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: The ${{ github.event_name }} event triggered first step.
+          args: The ${{ github.event_name }} event triggered this.
+
+      - name: send custom message with args
+        uses: appleboy/telegram-action@master
+        with:
+          to: '@work_d_pc' #This is my work-d-pc, I am using it bcoz the channel doesn't has username.
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: The ${{ github.event_name }} event triggered this.
