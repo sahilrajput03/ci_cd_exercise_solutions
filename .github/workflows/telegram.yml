@@ -16,7 +16,7 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           # to: '711263195'
-          to: \@sahilrajput03
+          to: '@sahilrajput03'
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: The ${{ github.event_name }} event triggered this.
 
@@ -30,6 +30,6 @@ jobs:
       - name: send custom message with args
         uses: appleboy/telegram-action@master
         with:
-          to: \@work_d_pc #This is my work-d-pc, I am using it bcoz the channel doesn't has username.
+          to: '@work_d_pc' #This is my work-d-pc, I am using it bcoz the channel doesn't has username.
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: The ${{ github.event_name }} event triggered this.
