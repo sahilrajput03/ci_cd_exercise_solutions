@@ -15,42 +15,37 @@ jobs:
       - name: send message to sahilrajput03
         uses: appleboy/telegram-action@master
         with:
-          to: '711263195'
+          to: '711263195' #This is for @sahilrajupt03, To get anybody's chat id(its basically user id though) forward his/her/group's message to @userinfobot.
           token: ${{ secrets.TELEGRAM_TOKEN }}
           # args: The ${{ github.event_name }} event triggered this.
           # If you miss args like commenting above line, then default message will be sent, e.g., `sahilrajput03/ci_cd_exercise_solutions/Test 3 Workflow triggered by sahilrajput03 (push)`.
 
-      # - name: send message to group fullstackopen
-      #   uses: appleboy/telegram-action@master
-      #   with:
-      #     to: '@fullstackcourse'
-      #     token: ${{ secrets.TELEGRAM_TOKEN }}
-      #     args: The ${{ github.event_name }} event triggered this.
-
-      # - name: send message to group work-d-pc
-      #   uses: appleboy/telegram-action@master
-      #   with:
-      #     to: '-1001158282997' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
-      #     token: ${{ secrets.TELEGRAM_TOKEN }}
-      #     # args: The ${{ github.event_name }} event triggered this.
-
       - name: send message to group work-d-pc
         uses: appleboy/telegram-action@master
         with:
-          to: '@work_d_pc' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
+          to: '-1001158282997' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: The ${{ github.event_name }} event triggered this1.
+          args: The ${{ github.event_name }} event triggered this. And it works cool.
+# Below fails all time
+# - name: send message to group work-d-pc
+#   uses: appleboy/telegram-action@master
+#   with:
+#     to: '@work_d_pc' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
+#     token: ${{ secrets.TELEGRAM_TOKEN }}
+#     args: The ${{ github.event_name }} event triggered this1.
 
-      - name: send message to group work-d-pc
-        uses: appleboy/telegram-action@master
-        with:
-          to: 'work_d_pc' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: The ${{ github.event_name }} event triggered this2.
+# Below fails all time
+# - name: send message to group work-d-pc
+#   uses: appleboy/telegram-action@master
+#   with:
+#     to: 'work_d_pc' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
+#     token: ${{ secrets.TELEGRAM_TOKEN }}
+#     args: The ${{ github.event_name }} event triggered this2.
 
-      - name: send message to group work-d-pc
-        uses: appleboy/telegram-action@master
-        with:
-          to: '\\@work_d_pc' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: The ${{ github.event_name }} event triggered this3.
+# Below fails all time
+# - name: send message to group work-d-pc
+#   uses: appleboy/telegram-action@master
+#   with:
+#     to: '\\@work_d_pc' #Notice I have added - in front of chat id of work-d-pc, to make it work as suggested @ https://stackoverflow.com/a/62835065, and it works now!
+#     token: ${{ secrets.TELEGRAM_TOKEN }}
+#     args: The ${{ github.event_name }} event triggered this3.
